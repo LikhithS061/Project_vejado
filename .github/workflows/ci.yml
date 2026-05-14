@@ -2,11 +2,13 @@ name: CI
 
 on:
   push:
+  pull_request:
 
 jobs:
-  test:
+  quality-checks:
+    name: quality-checks
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test
-        run: echo "GitHub Actions is working"
+      - name: Test workflow
+        run: echo "CI working"
